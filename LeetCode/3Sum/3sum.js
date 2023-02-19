@@ -3,18 +3,35 @@
  * @return {number[][]}
  */
 var threeSum = function (nums) {
-    let arr = [];
-    nums.sort();
-    for (let i = 0; i < nums.length; i++) {
-      for (let j = i + 1; j <= nums.length - 1; j++) {
-        for (let k = j + 1; k < nums.length - 1; k++) {
-          
+  nums.sort((a, b) => {
+    return a - b;
+  });
+  let result = [];
+  for (let i = 0; i < nums.length - 1; i++) {
+    if (!(i > 0 && nums[i] == nums[i - 1])) {
+      let left = i + 1;
+      let right = nums.length - 1;
+      while (left < right) {
+        if (nums[left] + nums[right] + nums[i] == 0) {
+          result.push([nums[i], nums[left], nums[right]]);
+          left++;
+          right--;
+
+          while (nums[left] == nums[left - 1] && left < right) {
+            left++;
+          }
+          while (nums[right] == nums[right + 1] && left < right) {
+            right--;
+          }
+        } else if (nums[left] + nums[right] + nums[i] < 0) {
+          left++;
+        } else {
+          right--;
         }
       }
-      if (nums[i] + nums[j] + nums[k] == 0) {
-        arr.push([nums[i], nums[j], nums[k]]);
-      }
     }
-    return arr;
-  };
-  
+  }
+  return result;
+};
+
+module.exports = { threeSum };
