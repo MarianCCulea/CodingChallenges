@@ -1,21 +1,26 @@
 const { isPalindrome } = require("./Palindrome/palindrome");
-
 const { threeSum } = require("./3Sum/3sum");
 const { twoSum } = require("./TwoSum/twosum");
+const { Bitset } = require("./2166.DesignBitset/bitsetBruteSet");
+const {
+  UndergroundSystem,
+} = require("./1396.DesignUndergroundSystem/undergroundBrute");
 const {
   lengthOfLongestSubstring,
 } = require("./3.LongestSubstring/longestSubstringOptimized");
 
-console.log(lengthOfLongestSubstring("abcabcbb"));
+// 2166.DesignBitset
+// var bs = new Bitset(5);
+// bs.fix(3);
+// bs.flip();
+// console.log(bs);
 
-console.log(twoSum([3, 2, 4], 6));
-
-// var muiengura = function (nums) {
-//   var muie = nums[nums.length - 1];
-//   return muie;
-// };
-
-// console.log(isPalindrome(121));
+//1396.DesignUndergroundSystem
+// var obj = new UndergroundSystem();
+// obj.checkIn(455, "sdasda", 35);
+// obj.checkOut(455, "LAMUIE", 55);
+// var param_3 = obj.getAverageTime("sdasda", "LAMUIE");
+// console.log(param_3);
 
 // console.log(
 //   threeSum([
@@ -24,49 +29,3 @@ console.log(twoSum([3, 2, 4], 6));
 //     61, 26, 1, 13, 29, 55, -82, 76, 26, 15, -29, 36, -29, 10, -70, 69, 17, 49,
 //   ])
 // );
-
-// console.log([
-//   [-82, -11, 93],
-//   [-82, 13, 69],
-//   [-82, 17, 65],
-//   [-82, 21, 61],
-//   [-82, 26, 56],
-//   [-82, 33, 49],
-//   [-82, 34, 48],
-//   [-82, 36, 46],
-//   [-70, -14, 84],
-//   [-70, -6, 76],
-//   [-70, 1, 69],
-//   [-70, 13, 57],
-//   [-70, 15, 55],
-//   [-70, 21, 49],
-//   [-70, 34, 36],
-//   [-66, -11, 77],
-//   [-66, -3, 69],
-//   [-66, 1, 65],
-//   [-66, 10, 56],
-//   [-66, 17, 49],
-//   [-49, -6, 55],
-//   [-49, -3, 52],
-//   [-49, 1, 48],
-//   [-49, 2, 47],
-//   [-49, 13, 36],
-//   [-49, 15, 34],
-//   [-49, 21, 28],
-//   [-43, -14, 57],
-//   [-43, -6, 49],
-//   [-43, -3, 46],
-//   [-43, 10, 33],
-//   [-43, 12, 31],
-//   [-43, 15, 28],
-//   [-43, 17, 26],
-//   [-29, -14, 43],
-//   [-29, 1, 28],
-//   [-29, 12, 17],
-//   [-14, -3, 17],
-//   [-14, 1, 13],
-//   [-14, 2, 12],
-//   [-11, -6, 17],
-//   [-11, 1, 10],
-//   [-3, 1, 2],
-// ]);
